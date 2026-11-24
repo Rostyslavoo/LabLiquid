@@ -7,4 +7,4 @@ jobs:
       - run: python -c "print('hello')"
       - uses: actions/checkout@v7
       - uses: quarto-dev/quarto-actions/setup@v2
-      - run: auqrto render test.ipynb --execute --to pdf
+      - run: quarto render test.ipynb --execute --to pdf
