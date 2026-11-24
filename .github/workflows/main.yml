@@ -5,10 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Install Jupyter
-        run: python3 -m pip install jupyter nbformat
+        run: python3 -m pip install jupyter nbformat nbclient
       - run: python -c "print('hello')"
       - uses: actions/checkout@v7
       - uses: quarto-dev/quarto-actions/setup@v2
+        with: 
+          tinytex: true
       - run: quarto render test.ipynb --execute --to pdf
-       with: 
-         tinytex: true
