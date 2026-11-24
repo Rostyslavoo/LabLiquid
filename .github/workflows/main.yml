@@ -4,6 +4,8 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps: 
+      - name: Install Jupyter
+        run: python3 -m pip install jupyter nbformat
       - run: python -c "print('hello')"
       - uses: actions/checkout@v7
       - uses: quarto-dev/quarto-actions/setup@v2
